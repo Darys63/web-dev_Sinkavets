@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Sinkavets Darya</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      {
+        box-sizing: border-box;
+      }
+        header {
+            background-color: #90EE90;
+            text-align:center;
+            font-size: 20px;
+            color: white;
+            padding: 7px;
+        }
+
+        nav {
+            justify-content;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        article {
+            background-color: #90EE90;
+            padding: 10px;
+            width: auto;
+            height: auto;
+        }
+        section::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        footer {
+        background-color: #90EE90;
+        padding: 20px;
+        font-size: 25px;
+        color: white;
+        }
+        li {
+          display: inline;
+        }
+          .solid {border-style: solid;
+          border-color:white;
+        }
+        .fDiv {
+          padding: 10px ;
+          border: solid black;
+          background-color: rgb(60, 179, 113);
+          margin: 5px ;
+        }
+        .sDiv {
+          padding: 10px ;
+          border: solid rgb(0, 0, 0);
+          background-color: rgb(46, 139, 87);
+          margin: 5px ;
+        }
+        .tDiv {
+          padding: 10px ;
+          border: solid rgb(173, 255, 47);
+          background-color: rgb(34, 139, 34);
+          margin: 5px ;
+        }
+        img {
+          margin: 10px 10px;
+          float: right;
+          max-width: 400px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+         <h1>Understanding CSS Concepts</h1>
+        <nav>        
+        <ul>
+           <li><a href="#q1">Answer 1</a></li>
+           <li><a href="#q2">Answer 2</a></li>
+           <li><a href="#q3">Answer 3</a></li>
+           <li><a href="#q4">Answer 4</a></li>
+           <li><a href="#q5">Answer 5</a></li>
+        </ul>
+        </nav>
+    </header>
+    <article>
+
+       <section class="fDiv">
+
+        <h1 id="q1">What is a box model in CSS. Give the box-sizing property definition:</h1>
+        <p>The box model is a fundamental concept in CSS that describes how elements are rendered on a webpage. It consists of content, padding, border, and margin. The <code>box-sizing</code> property defines the rendering of the box model. By default, the <code>box-sizing</code> is set to <code>content-box</code>, meaning padding and border are added to the width and height of an element. Changing it to <code>border-box</code> includes the padding and border within the element's specified width and height.</p>
+        <img src="1.png" alt="Box">
+
+       </section>
+
+       <section class="sDiv">
+       
+        <h1 id="q2">What is a “clearfix hack” and when does it need to be applied</h1>
+        <p>The “clearfix hack” is a technique used to clear floated elements within a container. It is primarily applied when a container does not expand to the height of its floated child elements. By adding a clearfix class to the container and applying CSS rules to clear floats, the container will properly contain its children and prevent layout issues.</p>
+        <img src="2.jpg" alt="clearfix">
+
+      </section> 
+
+       <section class="tDiv">
+        <h1 id="q3">What is a “margin collapse” and what are the use cases for margin: auto and negative margin values</h1>
+        <p>Margin collapse is a CSS behavior where the vertical margins of adjacent elements, such as siblings or parent-child, collapse into a single margin. The <code>margin: auto</code> property can be used to center an element horizontally within its parent. Negative margin values can be used to create overlapping effects or adjust the positioning of elements relative to their normal flow in the document.</p>
+        <img src="3.png" alt="margin">
+
+       </section>
+       
+       <section class="fDiv">        
+        <h1 id="q4">What was the problem with achieving Holy Grail layout</h1>
+        <p>The Holy Grail layout refers to a webpage layout with a header, footer, and three columns of content, all with variable heights. The problem in the past was achieving this layout with CSS without using complex positioning or fixed heights, especially with the center column expanding vertically while keeping the other columns equal in height.</p>
+        <img src="4.png" alt="Holy">
+
+       </section>
+ 
+       <section class="sDiv">
+        <h1 id="q5">What are the modern ways to achieve Holy Grail layout</h1>
+        <p>Modern techniques like Flexbox and CSS Grid have made creating the Holy Grail layout much easier. Flexbox allows for flexible layouts where elements can easily be aligned both horizontally and vertically. CSS Grid provides a grid-based layout system that allows for precise placement of elements in rows and columns. These methods offer more control and flexibility compared to older CSS layout models.</p>
+        <img src="5.png" alt="Holy">
+
+       </section>
+    </article>
+    <footer>
+       <p> Sinkavets Darya, web-design, 12.05.2024 </p>
+    </footer>
+</body>
+</html>

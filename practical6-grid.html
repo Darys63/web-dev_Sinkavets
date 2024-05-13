@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 6 - Grid Layout</title>
+  <style>
+    body, p, h1, h2, h3, .news-meta {
+      margin: 0;
+      padding: 0;
+    }
+    container {
+      display: grid;
+      grid-template-areas:
+        'header header'
+        'hero hero'
+        'news news';
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    header {
+      grid-area: header;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      background:white;
+    }
+    .hero {
+      grid-area: hero;
+      background-size: cover;
+      padding: 20px;
+      color: #black;
+      grid-template-columns: 1fr;
+    }
+    .logo {
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      color: green;
+      
+    }
+    .fig {
+    float: left;
+    padding-right: 10px; 
+    padding-left: 10px;
+    padding-bottom: 10px; 
+    }
+    nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: green;
+        }
+
+    .news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    }
+    .news-item {
+      padding: 10px;
+    }
+    .news-thumbnail {
+      width: 350px;
+      height: auto;
+    }
+    .news-meta {
+      color: #666;
+      font-size: 14px;
+    }
+    .excerpt {
+       background-color: white;
+          margin: 5px ;
+        }
+    @media (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          'header'
+          'hero'
+          'news';
+      }
+      .news {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+      }
+      .news {
+        grid-template-columns: 1fr 1fr  1fr;
+      }
+      .excerpt {
+        display: block;
+      }
+  </style>
+</head>
+
+<div class="container">
+  <header>
+    <div class="logo"><img height="140" src="logo.png" alt="logo" ></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">News</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Block</a>
+      <a href="#">Regions</a>
+      <a href="#">Typography</a>
+    </nav>
+  </header>
+</div>
+<body>
+ <section class="fig">
+ <p><img src="li.jpg" width="400" height="200" alt="Иллюстрация" class="fig">
+  <h1> Mauris sodales placerat massa</h1>
+  Susperidisse in dul velit, vel fermentum eros Nullam blandit ipsum sed sem ullamcorper ac fermentum urna ullamcorper. Nunic pellentesque tristique sollicitudin. Vestibufumi ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eu vehicula risus.</p> 
+  </section>
+<dd><h1>News</h1></dd>
+    <section class="news">
+        <div class="news-item">
+            <img src="co.jpg" width="350"  alt="News Thumbnail">
+            <h2>Vestibulum sed ipsum primis in faucibus orci</h2>
+            <p class="meta-info">10.11.2011</p>
+            <p class="excerpt">Nunc pellentesque tristique solliatudin., Vestbulur arite ipsum primis in faudibus ora luctus et ultrices posuere cubilia Curae; Aenean eu...</p>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="news-item">
+            <img src="tr.png" width="350" height="225" alt="News Thumbnail">
+            <h2>Phasellus purus orci, rhoncus edget tincidunt</h2>
+            <p class="meta-info">10.11.2011</p>
+            <p class="excerpt">Spring has come to the city. The trees are in bloom, the birds are singing on the branches. People enjoy the warmth and the sun. Summer is coming soon, the time for vacations and vacations.</p>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="news-item">
+            <img src="or.png" width="350" height="225" alt="News Thumbnail">
+            <h2>News Headline 1</h2>
+            <p class="meta-info">10.11.2011</p>
+            <p class="excerpt">Spring has come to the city. The trees are in bloom, the birds are singing on the branches. People enjoy the warmth and the sun. Summer is coming soon, the time for vacations and vacations.</p>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="news-item">
+            <img src="se.png" width="350" height="225" alt="News Thumbnail">
+            <h2>News Headline 1</h2>
+            <p class="meta-info">13.09.2011</p>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="read-more">Read More</button>
+        </div>
+        
+    </section>
+
+</body>
+</html>

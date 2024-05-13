@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator Form</title>
+<style>
+       body {
+        font-family: Arial, sans-serif;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input, select, button {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<script>
+function calculate(num1, operator, num2) {
+ switch(operator) {
+ case '+':
+ return num1 + num2;
+ case '-':
+ return num1 - num2;
+ case '*':
+ return num1 * num2;
+ case '/':
+ if(num2 != 0) {
+ return num1 / num2;
+ } else {
+ return("Error: Division by zero is not allowed.");
+ }
+ default:
+ return("Error: Invalid operator.");
+ }
+}
+function performCalculation() {
+       var num1 =
+   parseFloat(document.getElementById('num1').value);
+       var operator = document.getElementById('operator').value;
+       var num2 =
+   parseFloat(document.getElementById('num2').value);
+       var result = calculate(num1, operator, num2);
+       document.getElementById('output').value = "The result is: "
+   + result;
+}
+
+</script>
+</head>
+<body>
+<form>
+  <label for="name1">Enter the first number:</label><br>
+  <input type="number" id="num1"  value="0"><br>
+  <label for="operator">select an operator:</label><br>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+  <label for="num2">Enter the second number:</label>
+  <input type="number" id="num2"  value="0"><br><br>
+    <button type="button" onclick="performCalculation()">Calculate</button>
+    <button type="reset">Reset</button>
+    <output id="output"></output>
+</form> 
+</body>
+</html>

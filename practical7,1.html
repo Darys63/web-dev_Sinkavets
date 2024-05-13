@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>carousel</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<style>
+    body{
+        background-color: rgb(139, 214, 173);
+    }
+    .owl-carousel .item {
+      padding: 30px;
+      background-color: rgb(247, 238, 104);
+    }
+    h2{
+       text-align: center; 
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="owl-carousel">
+    <div class="item">1. Repaint and Reflow of the webpage
+    <p> When modifications are applied to a webpage's design, the browser undergoes a process called reflow and repaint. Reflow encompasses the calculation of the layout of elements on the page, whereas repaint involves rendering the pixels on the screen based on the updated layout.</p>
+    <p>Reflow is more demanding in terms of resources as it impacts not just the modified element but also all elements dependent on its size or position, potentially causing a significant slowdown in the rendering process. In contrast, repaint is less resource-intensive as it solely affects the visual appearance of the altered elements</p>
+    <p>Enhancing the webpage to minimize reflows and repaints can enhance performance and user satisfaction.</p>
+    </div>
+    <div class="item">2. How does JavaScript on the webpage affect the page load speed and performance
+    <p>JavaScript can impact page load speed and performance by adding interactivity and dynamic content. However, poorly optimized or excessive JavaScript code can slow down page loading times, as the browser needs to download, parse, and execute the scripts. To improve performance, developers should minimize and optimize JavaScript code, defer non-essential scripts, and use asynchronous loading techniques.</p>
+    </div>
+    <div class="item">3. What is “minification” of the script? Why is it useful to minify your scripts
+    <p>Minification is the process of removing unnecessary characters like spaces, comments, and line breaks from code to reduce its size. This optimized code is still functionally equivalent but is smaller and faster to download, parse, and execute. Minifying scripts helps improve page load speed, reduce bandwidth usage, and enhance performance by making the code more compact and efficient.</p>
+    </div>
+    <div class="item">4. JS Web Worker and its use cases
+    <p>A JavaScript Web Worker is a browser feature that allows for running scripts in the background thread, separate from the main execution thread. Web Workers can perform tasks without blocking the user interface, making them ideal for handling complex computations, long-running processes, or parallel tasks. They are particularly useful when applications need to perform heavy computations without affecting the responsiveness of the user interface.</p>
+    </div>
+    <div class="item">Sources: Provide links to the online resources
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Reflow">Repaint and Reflow</a></li>
+        <li><a href="https://getpublii.com/blog/javascript-speed-and-performance.html">JavaScript on the webpage></a></li>
+        <li><a href="https://www.stackpath.com/edge-academy/what-is-minification/">What is “minification” of the script></a></li>
+        <li><a href="https://www.dhiwise.com/post/web-workers-vs-service-workers-in-javascript">JS Web Worker and its use cases</a></li>
+    </ul>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        nav: true, 
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true
+    });
+});
+</script>
+
+</body>
+</html>
